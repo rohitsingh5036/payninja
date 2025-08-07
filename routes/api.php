@@ -11,6 +11,7 @@ Route::post('/orders/initiate', [OrderController::class, 'initiate']);
 Route::post('/orders/{order}/address', [OrderController::class, 'addAddress']);
 Route::post('/orders/{order}/payment', [OrderController::class, 'addPayment']);
 Route::post('/orders/{order}/complete', [OrderController::class, 'complete']);
+Route::post('/orders/{order}/cancel', [OrderController::class, 'cancel']);
 
 Route::get('/test', function() {
     return response()->json(['status' => 'working']);
